@@ -94,6 +94,8 @@ padding:20px;
                     </thead>
                     <tbody>
                     <%
+                                Class.forName("com.mysql.cj.jdbc.Driver");
+
                              connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bjit_db" , "root", "");
                              statement=connection.createStatement();
                              String sql ="select * from expense order by date desc";
